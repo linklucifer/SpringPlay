@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here, here we only define Dev class -->
+    <bean id="dev" class="com.lucifer.Dev">
+<!--        <property name="age" value="12" />  this is called setter injection of values   -->
+<!--        <property name="laptop" ref="lap1" />-->
+        <constructor-arg ref="lap1" />
+
+
+<!--        constructor injection of age value -->
+<!--        <constructor-arg index="0" value="14" />-->
+    </bean>
+
+    <!--    now we have two objects of same class   -->
+    <bean id="dev1" class="com.lucifer.Dev">
+
+    </bean>
+
+    <!--    bean definitions for Laptop class. Now we have the objects of both the classes   -->
+    <bean id="lap1" class="com.lucifer.Laptop">
+
+    </bean>
+</beans>
+
+<!-- In the Spring Framework, a spring.xml file (often named beans.xml or applicationContext.xml)
+     is used to configure and manage application objects (beans) and their dependencies -->

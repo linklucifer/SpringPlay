@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Autowire: It will search the bean byName, byType -->
+    <bean id="dev" class="com.lucifer.Dev" autowire="byType">
+<!--       <property name="comp" ref="desk1" />-->
+    </bean>
+
+    <!--    bean definitions for Laptop class. Now we have the objects of both the classes   -->
+    <bean id="comp" class="com.lucifer.Laptop" primary="true">
+
+    </bean>
+
+    <bean id="desk1" class="com.lucifer.Desktop">
+
+    </bean>
+</beans>
